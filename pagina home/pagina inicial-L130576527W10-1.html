@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Receitinhas do TH.png">
+    <!--Fonte para os paragrafos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!--Fonte para os titulos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Receitas</title>
+
+    <style>
+        body {
+            background-color: rgb(229, 210, 191);
+        }
+
+        .home {
+            display: flex;
+            /*criação de um layote flexivel e deixa responsivel */
+            flex-wrap: wrap;
+            /*Permite que os itens quebrem para a proxima linha */
+            justify-content: center;
+            /*Espaça os itens igualmente no eixo horizontal*/
+            padding: 20px;
+            /*Espaço entre os itens*/
+            text-align: center;
+        }
+
+        #home1 {
+            display: flex;
+            text-align: center;
+            gap: 50px;
+            margin-right: 30px;
+            margin-top: 90px;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: rgb(150, 75, 0);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            border-radius: 10px;
+            margin-top: 0px;
+        }
+
+        .buscar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            width: 250px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid black;
+            color: black;
+        }
+
+        img {
+            width: 30px;
+        }
+
+        #titulocentral {
+            color: rgb(255, 255, 255);
+            margin-right: 10px;
+            font-size: 30px;
+            padding-right: 700px;
+        }
+
+        :placeholder-shown {
+            font-size: 15px;
+        }
+
+        /* Parte dos banners */
+        .receitas {
+            width: 300px;
+            height: 200px;
+            margin-left: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px chocolate;
+            transition: transform 0.3s ease;
+        }
+
+        .receitas:hover {
+            transform: scale(1.05);
+        }
+
+        .fotos {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .nome-receitas {
+            margin-left: 90px;
+            display: flex;
+            gap: 230px;
+        }
+
+        #titulo {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        /* Parte de outras receitas */
+
+        /*tira a parte de baixo que mostra que é um link*/
+        a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        .fotos-container {
+            margin: 60px;
+        }
+
+        .fotosAbaixo {
+            height: 5%;
+            width: 20%;
+            border-radius: 8px;
+        }
+
+        .receitasAbaixo {
+            display: flex;
+            align-items: center;
+        }
+
+        .tituloreceitas {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .texto {
+            margin-left: 30px;
+            max-width: 600px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #textotitulo {
+            margin-top: 50px;
+        }
+
+        #textoreceita {
+            margin-bottom: 120px;
+        }
+
+        h2 {
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+
+        /*footer*/
+        footer {
+            padding: 5px;
+            background-color: rgb(176, 120, 64);
+            padding-top: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            gap: 100px;
+        }
+
+        .footer-texto {
+            justify-items: center;
+        }
+
+        .foto-footer {
+            height: 100px;
+            width: 100px;
+        }
+
+        .rede-social {
+            height: 50px;
+            width: 50px;
+        }
+
+        .sugestoes {
+            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        .sugestoes-input {
+            width: 300px;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px black;
+        }
+
+        .sugestoes-input::placeholder {
+            font-size: 18px;
+            color: brown;
+            font-family: 'Varela Round';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="buscar">
+                <h1 id="titulocentral">Receitinhas do TH</h1>
+                <div class="input-container">
+                    <form action="">
+                        <input type="text" list="text" name="text" placeholder="O que você quer cozinhar hoje?">
+                        <datalist id="text">
+                            <option value="Pudim"></a>Pudim</option>
+                            <option value="Torta"></a>Torta</option>
+                            <option value="Hamburguer">Hamburguer</option>
+                            <option value="Bolo">Bolo</option>
+                        </datalist>
+                    </form>
+                    <button type="button">
+                        <img class="icone" src="/pagina home/imagens e video home/logo pesquisa.png" alt="logoPesquisar">
+                    </button>
+                </div>
+        </nav>
+    </div>
+
+    <section>
+        <nav class="home">
+            <ul id="home1">
+                <li type="none"><a href="#">Home</a></li>
+                <li type="none"><a href="#">Sobre</a></li>
+                <li type="none"><a href="#">Serviços</a></li>
+                <li type="none"><a href="#">Contatos</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+    <h1 id="titulo">Receitas Tradicionais</h1>
+    <div class="fotos">
+        <img class="receitas" src="/pagina home/imagens e video home/comida3.jpg" alt="">
+        <img class="receitas" src="/pagina home/imagens e video home/comida1.jpg" alt="">
+        <img class="receitas" src="/pagina home/imagens e video home/comida3.jpg" alt="">
+        <img class="receitas" src="/pagina home/imagens e video home/comida4.jpg" alt="">
+        <img class="receitas" src="/pagina home/imagens e video home/comida5.jpg" alt="">
+
+    </div>
+    <div class="nome-receitas">
+        <h2>Picanha na brasa</h2>
+        <h2>Strogonoff</h2>
+        <h2>Feijoada</h2>
+        <h2>Lasanha</h2>
+        <h2>Macarrão ao molho branco</h2>
+    </div>
+
+    <div class="fotos-container">
+        <h2>Outras receitas:</h2>
+
+        <div class="receitasAbaixo">
+            <img class="fotosAbaixo" src="/pagina home/imagens e video home/bolo de milho.jpg" alt="bolo de milho">
+            <div class="texto">
+                <h3 id="textotitulo">
+                    <a href="/pagina receitas/pagina bolo de milho/pagina bolo de milho.html">Bolo de Milho</a>
+                </h3>
+                <p id="textoreceita">Veja a receita desse bolo de milho, um acompanhamento versátil e rápido que todo
+                    mundo vai amar.</p>
+            </div>
+        </div>
+
+        <div class="receitasAbaixo">
+            <img class="fotosAbaixo" src="/pagina home/imagens e video home/pudim.jpg" alt="pudim">
+            <div class="texto">
+                <h3 id="textotitulo">
+                    <a href="/site de receitas/pagina receitas/pagina pudim/pagina pudim.html">Pudim</a>
+                </h3>
+                <p id="textoreceita">Veja como fazer essa receita de pudim de leite condensado lisinho e com uma calda
+                    perfeita de caramelo.</p>
+            </div>
+        </div>
+
+        <div class="receitasAbaixo">
+            <img class="fotosAbaixo" src="/pagina home/imagens e video home/torta.jpg" alt="torta">
+            <div class="texto">
+                <h3 id="textotitulo">
+                    <a href="/pagina receitas/pagina torta/pagina torta.html">Torta</a>
+                </h3>
+                <p id="textoreceita">Torta de frango. Aprenda como fazer receitas de torta deliciosas no Receitas. Veja
+                    o modo de preparo completo!</p>
+            </div>
+        </div>
+
+        <div class="receitasAbaixo">
+            <img class="fotosAbaixo" src="/pagina home/imagens e video home/hamburguer.jpg" alt="hamburguer">
+            <div class="texto">
+                <h3 id="textotitulo">
+                    <a href="/pagina receitas/pagina hamburguer/pagina hamburguer.html">Hamburguer</a>
+                </h3>
+                <p id="textoreceita">Confira como fazer hambúrguer artesanal: receita do chef Felipe Bronze leva blend
+                    de carnes, picles de cebola-roxa e ketchup caseiro</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Redes Sociais -->
+        <div class="sobre">
+            <p class="titulo-footer">Redes Sociais</p>
+            <a href="https://instagram.com/receitinhasdoth" target="_blank">
+                <img class="rede-social" src="/pagina home/imagens e video home/instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://facebook.com/receitinhasdoth" target="_blank">
+                <img class="rede-social" src="/pagina home/imagens e video home/facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://facebook.com/receitinhasdoth" target="_blank">
+                <img class="rede-social" src="/pagina home/imagens e video home/pinterest.png" alt="Pinterest">
+            </a>
+        </div>
+
+        <!-- Sugestões de Receitas -->
+        <div class="sugestoes">
+            <p class="titulo-footer">Sugestão de Receitas</p>
+            <p>Tem aquela receitinha mará que você acha que faltou? Envie sua sugestão para nós!</p>
+            <input class="sugestoes-input" type="text" name="sugestao" placeholder="Sugestões">
+        </div>
+
+        <!-- Informações do Site -->
+        <div class="footer-texto">
+            <h1>Receitinhas do TH</h1>
+            <p>Atividade criação de site</p>
+            <a href="https://www.sp.senac.br/cursos-livres?gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2pUypIQ42bfLQpvtP1GQzplUINCSf2K4rxegezptg9wiRbMWdwvOQkaAujTEALw_wcB" target="_blank">
+            <img class="foto-footer" src="/pagina home/imagens e video home/senac logo.png" alt="Logo do SENAC">
+            </a>
+        </div>
+
+        <!-- Contato -->
+        <div class="contato">
+            <p class="titulo-footer">Contato</p>
+            <p>E-mail: contato@receitinhasdoth.com</p>
+            <p>WhatsApp: +55 (11) 98765-4321</p>
+        </div>
+
+        <!-- Sites de Inspiração -->
+        <div class="inspiracoes">
+            <p class="titulo-footer">Sites de Inspiração:</p>
+            <p><a style="color: black;" href="https://www.tudogostoso.com.br" target="_blank">Tudo Gostoso</a></p>
+            <p><a style="color: black;" href="https://receitas.globo.com" target="_blank">Receitas Globo</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

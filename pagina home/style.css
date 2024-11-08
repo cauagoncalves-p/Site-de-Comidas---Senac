@@ -1,0 +1,14 @@
+p,li,h2{
+    font-family: 'Varela Round', cursive;
+    font-size: 20px;
+}
+
+h1,h2,#titulo{
+    font-family: 'Varela Round', cursive;
+    color: brown;
+}
+
+.titulo-footer{
+    color: brown;
+    font-family: 'Varela Round', cursive;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonte para os paragrafos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+
+    <style>
+        body{
+            background-color: rgb(229, 210, 191);
+        }
+        .centralizar {
+            justify-items: center;
+
+        }
+
+        input {
+            padding: 15px;
+            border-radius: 8px;
+            width: 400px;
+            margin-top: 10px;
+        }
+
+        .formulario {
+            margin-right: 100px;
+        }
+
+        #enviar {
+            text-align: center;
+        }
+
+        #nome {
+            margin-right: 250px;
+        }
+
+        #sobrenome {
+            margin-right: 280px;
+        }
+
+        #nascimento {
+            margin-bottom: 10px;
+            margin-right: 220px;
+
+        }
+
+        h1,
+        h2 {
+            font-size: 35px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            padding-bottom: 20px;
+            margin-right: 100px;
+
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            width: 430px;
+            margin-top: 10px;
+            background-color: rgb(150, 75, 0);
+            color: rgb(255, 255, 255);
+            font-family: 'Varela Round', cursive;
+            border: none;
+        }
+
+        #titulocentral {
+            margin-right: 100px;
+        }
+
+        :placeholder-shown {
+            font-size: 20px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        img {
+            margin-right: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centralizar">
+        <h1 id="titulocentral">Receitinhas do TH</h1>
+        <h2 id="titlosegundario">Um site para você se deliciar</h2>
+        <img src="Receitinhas do TH.png" alt="" width="450px" height="300px">
+        <form class="formulario">
+            <label id="nome" for="pnome">Primeiro Nome: </label><br>
+            <input type=" text" id="pnome" name="pnome" placeholder="insira o seu Primeiro Nome"> <br><br>
+
+            <label id="sobrenome" for="snome">Sobrenome: </label><br>
+            <input type=" text" id="snome" name="snome" placeholder="insira o seu Sobrenome"><br><br>
+
+            <label id="nascimento" for="data">Data de Nascimento: </label><br>
+            <input type="text" id="data" name="data" placeholder="informe seu Nascimento"><br><br>
+
+            <button class="button"><a href="/pagina home/pagina inicial.html">Continuar</a></button>
+        </form>
+    </div>
+</body>
+</html>
